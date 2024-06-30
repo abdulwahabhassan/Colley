@@ -27,7 +27,7 @@
         android:layout_marginStart="@dimen/margin_8dp"
         android:ellipsize="end"
         android:textColor="@color/light_pearl"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/notificationImageView"
         app:layout_constraintTop_toTopOf="@+id/notificationImageView"

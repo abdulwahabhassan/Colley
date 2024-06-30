@@ -55,7 +55,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:textColor="@color/pearl"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/timeStampTextView"
             app:layout_constraintHorizontal_bias="0.0"
@@ -110,7 +110,7 @@
             android:paddingEnd="@dimen/margin_16dp"
             android:paddingBottom="@dimen/margin_8dp"
             android:textColor="@color/light_pearl"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userPhotoImageView" />

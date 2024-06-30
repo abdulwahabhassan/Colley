@@ -15,14 +15,15 @@
         android:layout_marginTop="@dimen/margin_30dp"
         android:textStyle="bold"
         android:letterSpacing="0.06"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         android:visibility="invisible"
         android:textColor="@color/light_pearl"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/continueButton"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_24dp"
         android:textColor="@color/light_pearl"
         android:visibility="invisible"
         android:textAllCaps="false"

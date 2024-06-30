@@ -17,7 +17,7 @@
             android:layout_marginTop="@dimen/padding_16dp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/text_size_15sp" />
+            android:textSize="@dimen/text_size_14sp" />
 
     <View
         android:layout_width="match_parent"

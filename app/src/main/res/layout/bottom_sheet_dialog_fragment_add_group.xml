@@ -119,7 +119,7 @@
             android:textColor="@color/light_pearl"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/text_size_15sp" />
+            android:textSize="@dimen/text_size_14sp" />
 
         <TextView
             android:id="@+id/selectedMemberCountTextView"
@@ -130,7 +130,7 @@
             android:layout_marginStart="@dimen/padding_8dp"
             android:textColor="@color/light_pearl"
             android:textStyle="bold"
-            android:textSize="@dimen/text_size_15sp"/>
+            android:textSize="@dimen/text_size_14sp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

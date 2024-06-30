@@ -22,7 +22,7 @@
             android:paddingStart="@dimen/padding_16dp"
             android:paddingEnd="@dimen/padding_8dp"
             android:textColor="@color/pearl"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             android:paddingEnd="@dimen/padding_16dp"
             android:paddingBottom="@dimen/margin_8dp"
             android:textColor="@color/light_pearl"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/issueTitleTextView"
             app:layout_constraintTop_toBottomOf="@+id/issueTitleTextView" />
@@ -254,7 +254,7 @@
             android:layout_margin="@dimen/margin_8dp"
             android:text="@string/no_comments_text"
             android:textColor="@color/light_pearl"
-            android:textSize="@dimen/text_size_15sp" />
+            android:textSize="@dimen/text_size_14sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

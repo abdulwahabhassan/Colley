@@ -57,7 +57,7 @@
         android:padding="@dimen/padding_8dp"
         android:text="@string/view_profile_text"
         android:textColor="@color/light_pearl"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groupMemberName" />
@@ -77,7 +77,7 @@
         android:padding="@dimen/padding_8dp"
         android:text="@string/send_message_text"
         android:textColor="@color/light_pearl"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

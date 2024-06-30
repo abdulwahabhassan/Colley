@@ -23,7 +23,7 @@
                                 android:id="@+id/logOutTextView"
                                 android:onClick="logOut"
                                 android:title="@string/menu_item_logout_title"
-                                android:icon="@drawable/ic_logout" />
+                                android:icon="@drawable/ic_power" />
                      </group>
               </menu>
        </item>

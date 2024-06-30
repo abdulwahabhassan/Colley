@@ -40,7 +40,7 @@
         android:lines="1"
         android:textColor="@color/pearl"
         android:textAlignment="center"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/text_size_14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

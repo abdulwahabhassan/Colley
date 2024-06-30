@@ -34,7 +34,7 @@
         android:lines="1"
         android:textAlignment="viewStart"
         android:textColor="@color/pearl"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/groupImageView"
         app:layout_constraintEnd_toStartOf="@+id/unreadConversationCountTextView"

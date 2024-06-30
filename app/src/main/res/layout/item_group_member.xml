@@ -34,7 +34,7 @@
         android:lines="1"
         android:textAlignment="viewStart"
         android:textColor="@color/pearl"
-        android:textSize="@dimen/text_size_15sp"
+        android:textSize="@dimen/text_size_14sp"
         app:layout_constraintBottom_toBottomOf="@+id/groupMemberImageView"
         app:layout_constraintEnd_toStartOf="@+id/adminTextView"
         app:layout_constraintStart_toEndOf="@+id/groupMemberImageView"

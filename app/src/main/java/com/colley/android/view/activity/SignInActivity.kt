@@ -81,9 +81,12 @@ class SignInActivity : AppCompatActivity() {
         if (auth.currentUser == null) {
             signIn.launch(signInIntent)
         } else {
-            with(binding) {
-                continueButton.visibility = VISIBLE
-            }
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+//            with(binding) {
+//                continueButton.visibility = VISIBLE
+//            }
         }
     }
 
@@ -110,18 +113,22 @@ class SignInActivity : AppCompatActivity() {
             if ( user == null) {
                 dbRef.child("users").child(auth.currentUser?.uid!!)
                     .setValue(User(auth.currentUser?.uid, auth.currentUser?.email))
-                  with(binding) {
-                        welcomeTextView.text = getString(R.string.welcome_text)
-                        welcomeTextView.visibility = VISIBLE
-                        continueButton.visibility = VISIBLE
-                    }
-            } else {
-                with(binding) {
-                    welcomeTextView.text = getString(R.string.welcome_back_text)
-                    welcomeTextView.visibility = VISIBLE
-                    continueButton.visibility = VISIBLE
-                }
+//                  with(binding) {
+//                        welcomeTextView.text = getString(R.string.welcome_text)
+//                        welcomeTextView.visibility = VISIBLE
+//                        continueButton.visibility = VISIBLE
+//                    }
             }
+//            else {
+//                with(binding) {
+//                    welcomeTextView.text = getString(R.string.welcome_back_text)
+//                    welcomeTextView.visibility = VISIBLE
+//                    continueButton.visibility = VISIBLE
+//                }
+//            }
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
 

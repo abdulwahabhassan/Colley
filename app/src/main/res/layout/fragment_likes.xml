@@ -44,7 +44,7 @@
             android:layout_margin="@dimen/margin_8dp"
             android:text="@string/no_likes_text"
             android:textColor="@color/light_pearl"
-            android:textSize="@dimen/text_size_15sp" />
+            android:textSize="@dimen/text_size_14sp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

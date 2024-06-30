@@ -28,7 +28,7 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 
 class MemberInteractionBottomSheetDialogFragment(
-    private val parentContext: Context
+    private val parentContext: Context,
 ) : BottomSheetDialogFragment() {
 
     private var _binding: BottomSheetDialogFragmentMemberInteractionBinding? = null
@@ -41,7 +41,7 @@ class MemberInteractionBottomSheetDialogFragment(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
 
         _binding = BottomSheetDialogFragmentMemberInteractionBinding
@@ -63,36 +63,42 @@ class MemberInteractionBottomSheetDialogFragment(
         if (bundledMemberId != null) {
 
             //get and set member name
-            dbRef.child("profiles").child(bundledMemberId).get().addOnSuccessListener {
-                dataSnapshot ->
-                val memberProfile = dataSnapshot.getValue<Profile>()
-                if (memberProfile != null) {
-                    binding?.groupMemberName?.text =
-                        "${memberProfile.name}, ${memberProfile.school}"
+            dbRef.child("profiles").child(bundledMemberId).get()
+                .addOnSuccessListener { dataSnapshot ->
+                    val memberProfile = dataSnapshot.getValue<Profile>()
+                    if (memberProfile != null) {
+                        binding?.groupMemberName?.text =
+                            "${memberProfile.name}${
+                                if (memberProfile.school.isNullOrBlank()
+                                        .not()
+                                ) " , ${memberProfile.school}" else ""
+                            }"
+                    }
                 }
-            }
 
             //get and load member photo
-            dbRef.child("photos").child(bundledMemberId).get().addOnSuccessListener {
-                dataSnapshot ->
-                val memberPhoto = dataSnapshot.getValue<String>()
-                if (memberPhoto == null) {
-                    binding?.groupMemberImageView?.let {
-                        Glide.with(parentContext).load(R.drawable.ic_person_light_pearl)
-                            .into(it)
-                        binding?.photoProgressBar?.visibility = GONE
-                    }
-                } else {
-                    val options = RequestOptions()
-                        .error(R.drawable.ic_downloading)
-                        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            dbRef.child("photos").child(bundledMemberId).get()
+                .addOnSuccessListener { dataSnapshot ->
+                    val memberPhoto = dataSnapshot.getValue<String>()
+                    if (memberPhoto == null) {
+                        binding?.groupMemberImageView?.let {
+                            Glide.with(parentContext).load(R.drawable.ic_person_light_pearl)
+                                .into(it)
+                            binding?.photoProgressBar?.visibility = GONE
+                        }
+                    } else {
+                        val options = RequestOptions()
+                            .error(R.drawable.ic_downloading)
+                            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
 
-                    binding?.groupMemberImageView?.visibility = View.VISIBLE
-                    //using custom glide image loader to indicate progress in time
-                    GlideImageLoader(binding?.groupMemberImageView, binding
-                        ?.photoProgressBar).load(memberPhoto, options);
+                        binding?.groupMemberImageView?.visibility = View.VISIBLE
+                        //using custom glide image loader to indicate progress in time
+                        GlideImageLoader(
+                            binding?.groupMemberImageView, binding
+                                ?.photoProgressBar
+                        ).load(memberPhoto, options);
+                    }
                 }
-            }
 
         }
 
@@ -106,7 +112,9 @@ class MemberInteractionBottomSheetDialogFragment(
         //show profile when clicked
         binding?.viewProfileTextView?.setOnClickListener {
             val action = bundledMemberId?.let { it1 ->
-                GroupInfoFragmentDirections.actionGroupInfoFragmentToUserInfoFragment(bundledMemberId)
+                GroupInfoFragmentDirections.actionGroupInfoFragmentToUserInfoFragment(
+                    bundledMemberId
+                )
             }
             if (action != null) {
                 findNavController().navigate(action)

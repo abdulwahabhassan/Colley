@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_8dp"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_14sp"
             android:text="@string/not_a_member_of_any_group_text"
             android:textColor="@color/light_pearl" />
 

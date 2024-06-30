@@ -40,7 +40,7 @@
             android:ellipsize="end"
             android:lines="1"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/light_pearl"
             android:textSize="@dimen/text_size_16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/addPhotoButton"
@@ -141,7 +141,7 @@
                 android:layout_marginEnd="@dimen/margin_8dp"
                 android:textAlignment="center"
                 android:textColor="@color/light_pearl"
-                android:textSize="@dimen/text_size_15sp"
+                android:textSize="@dimen/text_size_14sp"
                 app:layout_constraintEnd_toEndOf="@+id/groupDescriptionTitleTextView"
                 app:layout_constraintStart_toStartOf="@+id/groupDescriptionTitleTextView"
                 app:layout_constraintTop_toBottomOf="@+id/aboutHorizontalLine" />
